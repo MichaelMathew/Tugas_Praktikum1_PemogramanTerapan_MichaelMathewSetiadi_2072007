@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.tugas_praktikum1_pemogramanterapan_michaelmathewsetiadi_2072007.HelloController">
+   <left>
+      <VBox prefHeight="400.0" prefWidth="208.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label text="Tambah Student Baru">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="30.0" left="10.0" top="30.0" />
+               </VBox.margin>
+            </Label>
+            <Label text="NRP:">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="nrp" />
+            <Label text="Nama:">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="nama" />
+            <Label text="Nilai IPA:">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="ipa" />
+            <Label text="Nilai IPS:">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="ips" />
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Button fx:id="btnAdd" mnemonicParsing="false" onAction="#Add" text="Tambah" />
+                  <Button fx:id="btnUpdate" mnemonicParsing="false" onAction="#Update" prefHeight="25.0" prefWidth="70.0" text="Update">
+                     <HBox.margin>
+                        <Insets left="15.0" right="15.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="btnRemove" mnemonicParsing="false" onAction="#Delete" text="Hapus" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </left>
+   <right>
+      <TableView fx:id="table1" onMouseClicked="#Selected" prefHeight="400.0" prefWidth="430.0" BorderPane.alignment="CENTER">
+        <columns>
+          <TableColumn fx:id="cNRP" prefWidth="75.0" text="NRP" />
+          <TableColumn fx:id="cNama" prefWidth="75.0" text="Nama" />
+          <TableColumn fx:id="cIPA" prefWidth="75.0" text="IPA" />
+          <TableColumn fx:id="cIPS" prefWidth="75.0" text="IPS" />
+        </columns>
+      </TableView>
+   </right>
+</BorderPane>
